@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Grogu\'s Way</string>
+    <string-array name="scan_types">
+        <item>Bluetooth LE</item>
+        <item>Bluetooth Classic</item>
+    </string-array>
+</resources>

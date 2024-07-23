@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/scanForBluetoothDevicesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Scan for Bluetooth Devices"
+        android:background="@drawable/button_background"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/checkUsbBluetoothAdapterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scanForBluetoothDevicesButton"
+        android:text="Check USB Bluetooth Adapter"
+        android:background="@drawable/button_background"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/checkRawSocketButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkUsbBluetoothAdapterButton"
+        android:text="Check USB Raw Socket"
+        android:background="@drawable/button_background"
+        android:textColor="@android:color/white" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkRawSocketButton">
+
+        <TextView
+            android:id="@+id/sampleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/stopScanningButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Stop Scanning"
+        android:background="@drawable/button_background"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>

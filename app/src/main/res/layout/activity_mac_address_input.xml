@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MacAddressInputActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_image" />
+
+    <!-- Overlay for Dark Mode -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <!-- Content Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp">
+
+        <!-- Bluetooth Type Label -->
+        <TextView
+            android:id="@+id/scan_type_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Bluetooth Type"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Bluetooth Type Dropdown -->
+        <Spinner
+            android:id="@+id/spinner_scan_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:popupBackground="@drawable/spinner_popup_background"
+            android:padding="12dp"
+            android:textColor="@android:color/white" />
+
+        <!-- Spacing -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- MAC Address Input -->
+        <EditText
+            android:id="@+id/mac_address_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter MAC Address (Optional)"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Start Button -->
+        <Button
+            android:id="@+id/start_usb_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Scanning"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_background"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+    <!-- Return Home Button -->
+    <Button
+        android:id="@+id/return_home_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Return Home"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
+        android:padding="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp" />
+
+</RelativeLayout>

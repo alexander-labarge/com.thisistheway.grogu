@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RawSocketCheckerActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_image" />
+
+    <!-- Overlay for Dark Mode -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/return_home_button"
+        android:background="#80000000" />
+
+    <!-- Content Layout -->
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/return_home_button"
+        android:layout_marginBottom="16dp">
+
+        <!-- Raw Socket Results Label -->
+        <TextView
+            android:id="@+id/raw_socket_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raw Socket Results"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Raw Socket Results Text -->
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/raw_socket_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/white" />
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Start Test Button -->
+    <Button
+        android:id="@+id/start_usb_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Test"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
+        android:padding="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp" />
+
+    <!-- Return Home Button -->
+    <Button
+        android:id="@+id/return_home_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Return Home"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
+        android:padding="12dp"
+        android:layout_above="@id/start_usb_button"
+        android:layout_margin="16dp" />
+
+</RelativeLayout>
